@@ -3,12 +3,12 @@ let a = document.getElementById("slifer");
 function Chango() {
   if(n===400) {   
     n = 0;  
-      a.style.transform = `translateX(-${n}%)`;
+      a.style.transform = `translateX(-${n}%,-30%)`;
        
     
   } else {
   n+=100
-  a.style.transform=`translateX(-${n}%)`
+  a.style.transform=`translate(-${n}%,-30%)`
 }
    
 }
@@ -16,11 +16,11 @@ function Chango() {
 function Pachim() {
   if(n===0) {
     n = 400;      
-      a.style.transform = `translateX(-${n}%)`;
+      a.style.transform = `translate(-${n}%,-30%)`;
     
   } else {
   n-=100
-  a.style.transform=`translateX(-${n}%)`
+  a.style.transform=`translate(-${n}%,-30%)`;
 }
 }
 

@@ -47,14 +47,15 @@ body {
 
 .imagen {
   width: 100%;
-  height: 121vh;
+  height: 129.6vh;
   object-fit: cover;
 }
 
 #slifer {
   position: relative;
   width: 100%;
-  height: 68vh;
+  height: 63vh;
+  transform: translateY(-30%);
   display: flex;
   z-index: -1;
   transition: all 0s ease-out;
@@ -176,7 +177,7 @@ body {
 #bder {
   position: absolute;
   right: 2%;
-  top: 25%;
+  top: 30%;
   height: 5rem;
   width: 5rem;
   color: var(--c-main);
@@ -188,7 +189,7 @@ body {
 #bizq {
   position: absolute;
   left: 2%;
-  top: 25%;
+  top: 30%;
   height: 5rem;
   width: 5rem;
   color: var(--c-main);
