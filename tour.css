@@ -1,0 +1,206 @@
+:root {
+  --c-main: skyblue;
+  --c-white: #fbfbfb; 
+}
+
+body {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#icon1 {
+  font-size: 3rem;
+}
+
+#navbar {
+  height: 5rem;
+  width: 100%;
+  background-color: var(--c-main);
+  color: var(--c-white);
+  display: flex;
+  position: fixed;
+}
+
+#navegador {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-around
+}
+
+#navegador div {
+  display: flex;
+  align-items: center;
+  gap: 1rem
+}
+
+#navegador ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style-type: none;
+}
+
+.imagen {
+  width: 100%;
+  height: 121vh;
+  object-fit: cover;
+}
+
+#slifer {
+  position: relative;
+  width: 100%;
+  height: 68vh;
+  display: flex;
+  z-index: -1;
+  transition: all 0s ease-out;
+  
+}
+
+#mostrar {
+  overflow: hidden;
+}
+
+.imagen-coll {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+#columnas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px,1fr));
+  justify-items: center;
+  margin: 0 auto;
+  column-gap: 5rem;
+  padding: 0 3rem;
+}
+
+#columnas div {
+  display: block;
+  width: 100%;
+  align-items: center;
+}
+
+#lugares > h1 {
+  margin: 2rem;
+  font: 2.5rem sans-serif;
+  font-weight: 900;
+  text-align: center;
+}
+
+.lugare-text {
+  font-family: "Montserrat";
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.lugare-text h1, button {
+  margin: 1.5rem auto;
+}
+
+#footer {
+  margin-top: 1rem;
+  background-color: var(--c-main);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem
+}
+
+#footer1 {
+  font-size: 1rem;
+  color: var(--c-white);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem
+}
+
+#icon2 {
+  margin: 0 auto;
+  color: var(--c-white);
+  font-size: 6.5rem;
+  right: 10rem;
+}
+
+#footer2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color:var(--c-white)
+}
+
+#footer2 p {
+  font-size: 2rem;
+  color:var(--c-white)
+}
+
+#footer2 div a {
+  margin: 0 0.5rem
+}
+
+#footer3 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color:var(--c-white)
+}
+
+#pages {
+  display: flex;
+  justify-content: center;
+}
+
+#pages div {
+  display: flex
+}
+
+.bx {
+  height: 2rem;
+  width: 2rem;
+  border: 1px solid var(--c-main);
+  background-color: var(--c-white);
+  color:skyblue;
+  border-left: none;
+  cursor: pointer;
+}
+
+#bx1 {
+  border-left: 1px solid var(--c-main);
+}
+
+#bder {
+  position: absolute;
+  right: 2%;
+  top: 25%;
+  height: 5rem;
+  width: 5rem;
+  color: var(--c-main);
+  font-size: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#bizq {
+  position: absolute;
+  left: 2%;
+  top: 25%;
+  height: 5rem;
+  width: 5rem;
+  color: var(--c-main);
+  font-size: 2rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.conocer {
+  height: 2rem;
+  width: 6rem;
+  border-radius: 1rem;
+  border: none;
+  background-color: #00BDFE;
+}
