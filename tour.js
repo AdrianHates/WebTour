@@ -2,8 +2,9 @@ let n = 0;
 let a = document.getElementById("slifer");
 function Chango() {
   if(n===400) {   
-    n = 0;  
-      a.style.transform = `translateX(-${n}%,-30%)`;
+    n = 0;
+    console.log(n)
+    a.style.transform = `translate(-${n}%,-30%)`;
        
     
   } else {

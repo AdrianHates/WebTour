@@ -47,8 +47,8 @@ body {
 
 .imagen {
   width: 100%;
-  height: 129.6vh;
-  object-fit: cover;
+  height: 131.2vh;
+  object-fit:contain;
 }
 
 #slifer {
@@ -204,4 +204,21 @@ body {
   border-radius: 1rem;
   border: none;
   background-color: #00BDFE;
+}
+
+#mant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+#mant img {
+  height: 20rem;
+}
+
+a {
+  text-decoration: none;
+  color: white
 }
