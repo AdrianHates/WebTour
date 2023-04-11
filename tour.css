@@ -17,12 +17,15 @@ body {
   font-size: 3rem;
 }
 
+/*navegador*/
+
 #navbar {
   height: 5rem;
   width: 100%;
   background-color: var(--c-main);
   color: var(--c-white);
   display: flex;
+  flex-wrap: wrap;
   position: fixed;
 }
 
