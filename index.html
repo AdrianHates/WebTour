@@ -1,69 +1,149 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Mi página con funciones JavaScript</title>
-  <style>
-    .subrayado {
-      background-color: yellow;
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-  <h1>Mi página con funciones JavaScript</h1>
-  
-  <p>Texto de ejemplo para subrayar:</p>
-  <p id="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida auctor diam, ac tristique eros venenatis ac. Sed eget rhoncus purus.</p>
-  
-  <button onclick="subrayarTexto()">Subrayar</button>
-  <button onclick="borrarSubrayado()">Borrar subrayado</button>
-  
-  <br><br>
-  
-  <textarea id="apuntes" rows="5" cols="30"></textarea>
-  <br>
-  <button onclick="guardarApuntes()">Guardar apuntes</button>
-  
-  <br><br>
-  
-  <h2>Botón de traducción de Google:</h2>
-  <div id="google_translate_element"></div>
-
-  <script>
-    function subrayarTexto() {
-      const seleccion = window.getSelection();
-      const rango = seleccion.getRangeAt(0);
-      const span = document.createElement('span');
-      span.className = 'subrayado';
-      rango.surroundContents(span);
-    }
-
-    function borrarSubrayado() {
-  const subrayados = document.querySelectorAll('.subrayado');
-  subrayados.forEach(span => {
-    const fragmento = document.createDocumentFragment();
-    while (span.firstChild) {
-      fragmento.appendChild(span.firstChild);
-    }
-    span.parentNode.replaceChild(fragmento, span);
-  });
-}
-
-    function guardarApuntes() {
-      const apuntes = document.getElementById('apuntes').value;
-      const blob = new Blob([apuntes], { type: 'text/plain' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'apuntes.txt';
-      a.click();
-    }
-
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({pageLanguage: 'es', includedLanguages: 'en,es', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
-    }
-  </script>
-  
-  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tour to the Inca Empire</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./tour.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  </head>
+  <body>
+    <div id="navbar">
+      <navbar id="navegador">
+        <div id="navegadordiv">
+        <h1>TOUR TO THE INCA EMPIRE</h1><i id="icon1" class="fa fa-globe" aria-hidden="true"></i>  
+        </div>
+        <ul id="navegadorul">
+          <li><p><a class="vinculo" href="#">Inicio</a></p></li>
+          <li><p><a class="vinculo" href="work.html">Login</a></p></li>
+          <li><p><a class="vinculo" href="work.html">Suscripcion</a></p></li>
+          <li><p><a class="vinculo" href="work.html">Contacto</a></p></li>
+          <li><p><a class="vinculo" href="work.html">Acerca de nosotros</a></p></li>
+        </ul>
+      </navbar>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./Imgs/chavin-de-huantar.jpg" class="d-block w-100" alt="huantar">
+        </div>
+        <div class="carousel-item">
+          <img src="./Imgs/canon del colca.jpg" class="d-block w-100" alt="colca">
+        </div>
+        <div class="carousel-item">
+          <img src="./Imgs/lago-titicaca-1.jpg" class="d-block w-100" alt="titicaca">
+        </div>
+        <div class="carousel-item">
+          <img src="./Imgs/lineas-de-nazca-1.jpg" class="d-block w-100" alt="lineasnazca">
+        </div>
+        <div class="carousel-item">
+          <img src="./Imgs/machu-picchu.jpg" class="d-block w-100" alt="machupicchu">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <div id="lugares">
+      <h1>Regocíjese en Perú</h1>
+      <div id="columnas">
+        <div>
+          <a>
+            <img class="imagen-coll" src="./imagenes/Machu-picchu.jpg" alt="Machu Picchu" />
+          </a>
+          <div class="lugare-text">
+            <h1>Machu Picchu - Cuzco</h1>
+            <p>Machu Picchu es una ciudadela inca ubicada en las alturas de las montañas de los Andes en Perú, sobre el valle del río Urubamba. Se construyó en el siglo XV y luego fue abandonada, y es famosa por sus sofisticadas paredes de piedra seca que combinan enormes bloques sin el uso de un mortero, los edificios fascinantes que se relacionan con las alineaciones astronómicas y sus vistas panorámicas. El uso exacto que tuvo sigue siendo un misterio.</p>
+            <button class="conocer">Conoce mas</button>
+          </div>
+        </div>
+        <div>
+          <a>
+            <img class="imagen-coll" src="./imagenes/Chavin-Huantar.jpg" alt="Chavin de Huantar" />
+          </a>
+          <div class="lugare-text">
+            <h1>Chavin de Huantar - Huaraz</h1>
+            <p>Chavín de Huántar es un sitio arqueológico (o monumento arqueológico) ubicado en el distrito de Chavín de Huántar, provincia de Huari, departamento de Áncash, en el Perú. Declarado como Patrimonio de la Humanidad en 1985. Se ubica a 462 km al noroeste de Lima y a 86 km de Huaraz, a una elevación de 3177 m s. n. m., en la Sierra Oriental de Áncash al este de la Cordillera Blanca. El complejo se ubica en la confluencia de los ríos Huacheksa y Mosna, en la cuenca alta del río Marañón, que fue un punto de paso preinca desde la costa hacia la selva, lo que propició su crecimiento e importancia en la recolección de insumos y tránsito de bienes.</p>
+            <button class="conocer">Conoce mas</button>
+          </div>
+        </div>
+        <div>
+          <a>
+            <img class="imagen-coll" src="./imagenes/lago-titicaca.jpg" alt="Lago Titicaca" />
+          </a>
+          <div class="lugare-text">
+            <h1>Lago Titicaca - Puno</h1>
+            <p>El lago Titicaca se extiende por la frontera entre Perú y Bolivia en la cordillera de los Andes y es uno de los lagos más grandes de Sudamérica y el cuerpo de agua navegable más alto del mundo. Se dice que es la cuna de los incas y cuenta con varias ruinas. Sus aguas son conocidas por ser tranquilas y dar un reflejo brillante. En sus alrededores, se ubica la Reserva Nacional del Titicaca que alberga especies acuáticas poco comunes, como las ranas gigantes.</p>
+            <button class="conocer">Conoce mas</button>
+          </div>
+        </div>
+        <div>
+          <a>
+            <img class="imagen-coll" src="./imagenes/Lineas de Nazca.jpg" alt="Lineas de Nazca" />
+          </a>
+          <div class="lugare-text">
+            <h1>Lineas de Nazca - Ica</h1>
+            <p>Las Líneas de Nazca, en el sur de Perú, son un grupo de geoglifos precolombinos que se extienden en las arenas del desierto. Abarcan un área de casi 1,000 kilómetros cuadrados y hay alrededor de 300 figuras distintas, que incluyen animales y plantas. Están compuestos por más de 10,000 líneas, algunas de estas de 30 metros de ancho y más de 9 kilómetros de largo. Es más fácil ver las figuras desde el aire o desde montañas cercanas.</p>
+            <button class="conocer">Conoce mas</button>
+          </div>
+        </div>
+        <div>
+          <a>
+            <img class="imagen-coll" src="./imagenes/colca.jpg" alt="Canon del Colca" />
+          </a>
+          <div class="lugare-text">
+            <h1>Canon del Colca - Arequipa</h1>
+            <p>El Cañón del Colca se encuentra en el valle de un río del sur de Perú y es famoso por ser uno de los más profundos del mundo. Es un destino famoso para el senderismo. Es un hábitat del cóndor Andino gigante, que se observa desde miradores como la Cruz del Cóndor. El paisaje del cañón abarca un valle verde y aldeas remotas tradicionales con agricultura en terrazas que precedió a los Incas. El río Colca es popular para el descenso en balsas.</p>
+            <button class="conocer">Conoce mas</button>
+          </div>
+        </div>
+      </div>
+      <div id="pages">
+        <div>
+          <button id="bx1" class="bx">1</button>
+          <button class="bx">2</button>
+          <button class="bx">3</button>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+      <div id="footer1">
+        <h1>TOUR TO THE INCA EMPIRE</h1><i id="icon2" class="fa fa-globe" aria-hidden="true"></i>
+      </div>
+      <div id="footer2">
+        <p>Siguenos en redes:</p>
+        <div>
+          <a><i class="fab fa-facebook fa-3x text-light" aria-hidden="true"></i></a>
+          <a><i class="fab fa-instagram-square fa-3x text-light" aria-hidden="true"></i></a>
+          <a><i class="fab fa-twitter fa-3x text-light ms-2" aria-hidden="true"></i></a>        
+        </div>
+      </div>
+      <div id="footer3">
+        <h1>Consultas:</h1>
+        <h5>+51 987654321(Lima)</h5>
+        <ul>
+          <li>Lunes a Viernes 8:00 a.m. - 20:00 p.m.</li>
+          <li>Sabados 8:00 a.m. - 13 p.m.</li>
+        </ul>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/897ce44a2b.js" crossorigin="anonymous"></script>
+    <script src="./tour.js"></script>
+  </body>
 </html>
